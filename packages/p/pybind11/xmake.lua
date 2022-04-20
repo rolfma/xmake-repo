@@ -14,7 +14,7 @@ package("pybind11")
     add_versions("v2.9.1", "ef9e63be55b3b29b4447ead511a7a898fdf36847f21cec27a13df0db051ed96b")
     add_versions("v2.9.2", "d1646e6f70d8a3acb2ddd85ce1ed543b5dd579c68b8fb8e9638282af20edead8")
 
-    add_deps("cmake")
+    add_deps("cmake", "python 3.x")
     on_install("windows", "macosx", "linux", function (package)
         import("package.tools.cmake").install(package, {"-DPYBIND11_TEST=OFF"})
     end)
