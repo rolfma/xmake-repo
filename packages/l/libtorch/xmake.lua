@@ -33,7 +33,7 @@ package("libtorch")
     if is_plat("linux") then
         add_syslinks("rt")
     end
- 
+  
     -- enable long paths for git submodule on windows
     if is_host("windows") and set_policy then
         set_policy("platform.longpaths", true)
